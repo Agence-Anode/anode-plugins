@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wireframe — {{CLIENT}}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwindcss.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50: '#f0f0f0', 100: '#e0e0e0', 200: '#c0c0c0', 300: '#a0a0a0', 400: '#808080', 500: '#606060', 600: '#404040', 700: '#303030', 800: '#202020', 900: '#101010' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .wireframe-badge {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      background: #18181b; color: #a1a1aa; font-size: 11px;
+      padding: 6px 16px; display: flex; justify-content: space-between; align-items: center;
+    }
+    .wireframe-badge strong { color: #fff; }
+    .section-label {
+      position: absolute; top: 8px; left: 8px; z-index: 10;
+      background: #18181b; color: #71717a; font-size: 10px; font-weight: 600;
+      padding: 2px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .placeholder-img {
+      background: #e4e4e7; display: flex; align-items: center; justify-content: center;
+      color: #a1a1aa; font-size: 12px; font-weight: 500; border-radius: 8px;
+    }
+  </style>
+</head>
+<body class="bg-white text-zinc-900 pt-8">
+
+  <!-- Barre wireframe fixe -->
+  <div class="wireframe-badge">
+    <span>WIREFRAME — <strong>{{CLIENT}}</strong></span>
+    <span>{{DATE}} · Framework: <strong>{{FRAMEWORK}}</strong> · CTA: <strong>{{CTA_TYPE}}</strong></span>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- HEADER / NAV -->
+  <!-- ============================================================ -->
+  <header class="relative bg-white border-b border-zinc-200">
+    <span class="section-label">header</span>
+    <nav class="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8">
+      <div class="flex items-center gap-2">
+        <div class="placeholder-img h-8 w-8">L</div>
+        <span class="font-semibold text-sm text-zinc-400">{{CLIENT}}</span>
+      </div>
+      <div class="hidden md:flex gap-8 text-sm text-zinc-400">
+        <span>Nav 1</span>
+        <span>Nav 2</span>
+        <span>Nav 3</span>
+      </div>
+      <a href="#cta-final" class="rounded-md bg-zinc-900 px-4 py-2 text-sm font-semibold text-white">{{CTA_TEXT}}</a>
+    </nav>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- HERO -->
+  <!-- ============================================================ -->
+  <section class="relative bg-zinc-50 py-24 sm:py-32">
+    <span class="section-label">hero</span>
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="text-sm font-semibold text-zinc-400 uppercase tracking-wide mb-4">{{HERO_EYEBROW}}</p>
+        <h1 class="text-4xl font-bold tracking-tight text-zinc-900 sm:text-6xl">{{HERO_HEADLINE}}</h1>
+        <p class="mt-6 text-lg leading-8 text-zinc-500">{{HERO_SUBHEADLINE}}</p>
+        <div class="mt-10 flex items-center justify-center gap-x-6">
+          <a href="#cta-final" class="rounded-md bg-zinc-900 px-6 py-3 text-sm font-semibold text-white shadow-sm">{{CTA_TEXT}}</a>
+          <a href="#features" class="text-sm font-semibold text-zinc-500">En savoir plus &darr;</a>
+        </div>
+      </div>
+      <!-- Placeholder visuel hero -->
+      <div class="mt-16 placeholder-img mx-auto max-w-5xl h-64 sm:h-80">Screenshot / Visuel hero</div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- LOGO CLOUD -->
+  <!-- ============================================================ -->
+  <section class="relative bg-white py-16">
+    <span class="section-label">logo-cloud</span>
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <p class="text-center text-sm font-semibold text-zinc-400 mb-8">{{LOGO_CLOUD_TITLE}}</p>
+      <div class="flex items-center justify-center gap-8 flex-wrap">
+        <div class="placeholder-img h-10 w-24">Logo 1</div>
+        <div class="placeholder-img h-10 w-24">Logo 2</div>
+        <div class="placeholder-img h-10 w-24">Logo 3</div>
+        <div class="placeholder-img h-10 w-24">Logo 4</div>
+        <div class="placeholder-img h-10 w-24">Logo 5</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- FEATURES -->
+  <!-- ============================================================ -->
+  <section id="features" class="relative bg-zinc-50 py-24 sm:py-32">
+    <span class="section-label">features</span>
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center mb-16">
+        <p class="text-sm font-semibold text-zinc-400 uppercase tracking-wide">{{FEATURES_EYEBROW}}</p>
+        <h2 class="mt-2 text-3xl font-bold tracking-tight text-zinc-900">{{FEATURES_TITLE}}</h2>
+        <p class="mt-4 text-lg text-zinc-500">{{FEATURES_SUBTITLE}}</p>
+      </div>
+      <div class="mx-auto max-w-5xl grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Feature 1 -->
+        <div class="bg-white rounded-xl p-6 border border-zinc-200">
+          <div class="placeholder-img h-10 w-10 mb-4 rounded-lg">ic</div>
+          <h3 class="font-semibold text-zinc-900">{{FEATURE_1_TITLE}}</h3>
+          <p class="mt-2 text-sm text-zinc-500">{{FEATURE_1_DESC}}</p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="bg-white rounded-xl p-6 border border-zinc-200">
+          <div class="placeholder-img h-10 w-10 mb-4 rounded-lg">ic</div>
+          <h3 class="font-semibold text-zinc-900">{{FEATURE_2_TITLE}}</h3>
+          <p class="mt-2 text-sm text-zinc-500">{{FEATURE_2_DESC}}</p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="bg-white rounded-xl p-6 border border-zinc-200">
+          <div class="placeholder-img h-10 w-10 mb-4 rounded-lg">ic</div>
+          <h3 class="font-semibold text-zinc-900">{{FEATURE_3_TITLE}}</h3>
+          <p class="mt-2 text-sm text-zinc-500">{{FEATURE_3_DESC}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- STATS -->
+  <!-- ============================================================ -->
+  <section class="relative bg-zinc-900 py-24 sm:py-32">
+    <span class="section-label" style="color:#52525b">stats</span>
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center mb-16">
+        <h2 class="text-3xl font-bold tracking-tight text-white">{{STATS_TITLE}}</h2>
+        <p class="mt-4 text-lg text-zinc-400">{{STATS_SUBTITLE}}</p>
+      </div>
+      <div class="mx-auto max-w-4xl grid grid-cols-2 gap-8 sm:grid-cols-4 text-center">
+        <div>
+          <p class="text-4xl font-bold text-white">{{STAT_1_VALUE}}</p>
+          <p class="mt-2 text-sm text-zinc-400">{{STAT_1_LABEL}}</p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold text-white">{{STAT_2_VALUE}}</p>
+          <p class="mt-2 text-sm text-zinc-400">{{STAT_2_LABEL}}</p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold text-white">{{STAT_3_VALUE}}</p>
+          <p class="mt-2 text-sm text-zinc-400">{{STAT_3_LABEL}}</p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold text-white">{{STAT_4_VALUE}}</p>
+          <p class="mt-2 text-sm text-zinc-400">{{STAT_4_LABEL}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- TESTIMONIAL -->
+  <!-- ============================================================ -->
+  <section class="relative bg-white py-24 sm:py-32">
+    <span class="section-label">testimonial</span>
+    <div class="mx-auto max-w-4xl px-6 lg:px-8 text-center">
+      <div class="placeholder-img h-12 w-32 mx-auto mb-8">Logo client</div>
+      <blockquote class="text-2xl font-medium leading-9 text-zinc-900">
+        &laquo; {{TESTIMONIAL_QUOTE}} &raquo;
+      </blockquote>
+      <figcaption class="mt-8">
+        <div class="placeholder-img h-12 w-12 rounded-full mx-auto mb-3">Av</div>
+        <p class="font-semibold text-zinc-900">{{TESTIMONIAL_NAME}}</p>
+        <p class="text-sm text-zinc-500">{{TESTIMONIAL_ROLE}}</p>
+      </figcaption>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- CTA MID-PAGE -->
+  <!-- ============================================================ -->
+  <section class="relative bg-zinc-900 py-16">
+    <span class="section-label" style="color:#52525b">cta-mid</span>
+    <div class="mx-auto max-w-4xl px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold tracking-tight text-white">{{CTA_MID_TITLE}}</h2>
+      <p class="mt-4 text-lg text-zinc-400">{{CTA_MID_SUBTITLE}}</p>
+      <div class="mt-8">
+        <a href="#cta-final" class="rounded-md bg-white px-6 py-3 text-sm font-semibold text-zinc-900 shadow-sm">{{CTA_TEXT}}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- FAQ -->
+  <!-- ============================================================ -->
+  <section class="relative bg-white py-24 sm:py-32">
+    <span class="section-label">faq</span>
+    <div class="mx-auto max-w-4xl px-6 lg:px-8">
+      <h2 class="text-3xl font-bold tracking-tight text-zinc-900 text-center mb-12">{{FAQ_TITLE}}</h2>
+      <dl class="space-y-8 divide-y divide-zinc-200">
+        <div class="pt-8">
+          <dt class="font-semibold text-zinc-900">{{FAQ_1_Q}}</dt>
+          <dd class="mt-2 text-sm text-zinc-500">{{FAQ_1_A}}</dd>
+        </div>
+        <div class="pt-8">
+          <dt class="font-semibold text-zinc-900">{{FAQ_2_Q}}</dt>
+          <dd class="mt-2 text-sm text-zinc-500">{{FAQ_2_A}}</dd>
+        </div>
+        <div class="pt-8">
+          <dt class="font-semibold text-zinc-900">{{FAQ_3_Q}}</dt>
+          <dd class="mt-2 text-sm text-zinc-500">{{FAQ_3_A}}</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- CTA FINAL -->
+  <!-- ============================================================ -->
+  <section id="cta-final" class="relative bg-zinc-50 py-24 sm:py-32">
+    <span class="section-label">cta-final</span>
+    <div class="mx-auto max-w-4xl px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold tracking-tight text-zinc-900">{{CTA_FINAL_TITLE}}</h2>
+      <p class="mt-4 text-lg text-zinc-500">{{CTA_FINAL_SUBTITLE}}</p>
+      <div class="mt-10">
+        <a href="#" class="rounded-md bg-zinc-900 px-8 py-4 text-base font-semibold text-white shadow-sm">{{CTA_TEXT}}</a>
+      </div>
+      <p class="mt-4 text-xs text-zinc-400">{{CTA_REASSURANCE}}</p>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER -->
+  <!-- ============================================================ -->
+  <footer class="relative bg-zinc-900 py-12">
+    <span class="section-label" style="color:#52525b">footer</span>
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 text-center">
+      <p class="text-sm text-zinc-500">&copy; {{YEAR}} {{CLIENT}} — Tous droits reserves</p>
+      <div class="mt-4 flex justify-center gap-6 text-xs text-zinc-600">
+        <span>Mentions legales</span>
+        <span>Politique de confidentialite</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

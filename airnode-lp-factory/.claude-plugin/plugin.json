@@ -1,0 +1,9 @@
+{
+  "name": "airnode-lp",
+  "version": "1.0.0",
+  "description": "Workflow de creation de brief LP enrichi pour les consultants Anode",
+  "author": {
+    "name": "Agence Anode"
+  },
+  "repository": "https://github.com/Agence-Anode/airnode-lp-factory"
+}
