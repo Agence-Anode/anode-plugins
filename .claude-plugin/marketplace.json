@@ -12,6 +12,12 @@
       "source": "./airnode-lp-factory",
       "description": "Workflow de creation de brief LP enrichi pour les consultants Anode",
       "version": "1.0.0"
+    },
+    {
+      "name": "anode-tracking",
+      "source": "./anode-tracking",
+      "description": "Outils de tracking et test UTM (Google, Meta, LinkedIn, Bing)",
+      "version": "1.0.0"
     }
   ]
 }

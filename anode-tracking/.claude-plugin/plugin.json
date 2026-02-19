@@ -1,0 +1,8 @@
+{
+  "name": "anode-tracking",
+  "version": "1.0.0",
+  "description": "Outils de tracking et test UTM pour les consultants Anode",
+  "author": {
+    "name": "Agence Anode"
+  }
+}
