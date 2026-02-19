@@ -1,6 +1,6 @@
 {
   "name": "airnode-lp",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Workflow LP enrichi + outils tracking UTM pour les consultants Anode",
   "author": {
     "name": "Agence Anode"
